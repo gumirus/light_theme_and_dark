@@ -1,0 +1,20 @@
+/* Темный фон с иконкой луны */
+.dark-theme {
+  background-color: #333;
+  background-image: url("moon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+}
+
+/* Светлый фон с иконкой солнца */
+.light-theme {
+  background-color: #fff;
+  background-image: url("sun.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #333;
+}
+button img {
+  width: 50px;
+}
