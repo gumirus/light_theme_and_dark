@@ -1,17 +1,19 @@
 /* Темный фон с иконкой луны */
 .dark-theme {
-  background-color: #333;
+  background-color: rgb(51, 51, 51);
   background-image: url("moon.png");
-  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-position: center;
-  color: #fff;
+  background-size: cover;
+  color: rgb(231, 180, 12);
 }
 
 /* Светлый фон с иконкой солнца */
 .light-theme {
-  background-color: rgb(245, 220, 153);
+  background-color: rgb(220, 247, 245);
   background-image: url("sun.png");
-  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-position: center;
-  color: #333;
+  background-size: cover;
+  color: rgb(126, 126, 68);
 }
