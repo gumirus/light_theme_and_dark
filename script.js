@@ -1,20 +1,33 @@
-const toggleThemeButton = document.getElementById("toggle-theme-button");
-toggleThemeButton.onclick = function () {
-  document.body.classList.toggle("light-theme");
-  document.body.classList.toggle("dark-theme");
-};
+const lightIcon = document.querySelector("#light-icon");
+const darkIcon = document.querySelector("#dark-icon");
+const switchButton = document.querySelector("#switch-theme");
 
-const themeIcon = document.querySelector("#theme-icon");
-const themeSection = document.querySelector("#theme-section");
-
-toggleThemeButton.addEventListener("click", () => {
-  if (themeSection.classList.contains("dark-theme")) {
-    themeSection.classList.remove("dark-theme");
-    themeSection.classList.add("light-theme");
-    themeIcon.src = "sun.png";
+document.addEventListener("DOMContentLoaded", function () {
+  const currentTheme = localStorage.getItem("theme") || "light-theme";
+  document.body.classList.add(currentTheme);
+  const theme = localStorage.getItem("theme"); // Проверить, есть ли тема в localStorage
+  console.log("Current theme:", theme);
+  if (theme === "dark-theme") {
+    document.body.classList.add("dark-theme");
+    lightIcon.style.display = "none";
+    darkIcon.style.display = "inline-block";
   } else {
-    themeSection.classList.remove("light-theme");
-    themeSection.classList.add("dark-theme");
-    themeIcon.src = "moon.png";
+    document.body.classList.add("light-theme");
+    lightIcon.style.display = "inline-block";
+    darkIcon.style.display = "none";
+  }
+});
+
+switchButton.addEventListener("click", function () {
+  if (document.body.classList.contains("light-theme")) {
+    document.body.classList.replace("light-theme", "dark-theme");
+    lightIcon.style.display = "none";
+    darkIcon.style.display = "inline-block";
+    localStorage.setItem("theme", "dark-theme");
+  } else {
+    document.body.classList.replace("dark-theme", "light-theme");
+    lightIcon.style.display = "inline-block";
+    darkIcon.style.display = "none";
+    localStorage.setItem("theme", "light-theme");
   }
 });
