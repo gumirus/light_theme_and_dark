@@ -9,12 +9,9 @@
 
 /* Светлый фон с иконкой солнца */
 .light-theme {
-  background-color: #fff;
+  background-color: rgb(245, 220, 153);
   background-image: url("sun.png");
   background-repeat: no-repeat;
   background-position: center;
   color: #333;
-}
-button img {
-  width: 50px;
 }
