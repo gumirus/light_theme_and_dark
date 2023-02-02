@@ -10,7 +10,7 @@
 
 /* Светлый фон с иконкой солнца */
 .light-theme {
-  background-color: rgb(220, 247, 245);
+  background-color: rgb(120, 221, 247);
   background-image: url("sun.png");
   background-attachment: fixed;
   background-position: center;
